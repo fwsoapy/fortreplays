@@ -1,0 +1,20 @@
+# Build output and binaries
+build/
+dist/
+tools/
+extractor/bin/
+extractor/obj/
+__pycache__/
+*.pyc
+*.exe
+*.pdb
+
+# Local copy of the site; docs/index.html is the published one
+FortReplays.html
+
+# Local tooling and personal files
+.claude/
+*.replay
+*.db
+*.sqlite
+account-id.bat

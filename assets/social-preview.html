@@ -1,0 +1,72 @@
+<!doctype html>
+<!-- Source for docs/og.png, the GitHub and link-preview image (1280x640).
+     Rebuild: chrome --headless --screenshot=docs/og.png --window-size=1280,640 assets/social-preview.html -->
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    width: 1280px; height: 640px; overflow: hidden;
+    font-family: "Segoe UI", Inter, system-ui, sans-serif; color: #eceae6;
+    background: radial-gradient(900px 500px at 85% 10%, rgba(123, 92, 255, 0.28), transparent 60%),
+                radial-gradient(700px 500px at 0% 100%, rgba(42, 120, 214, 0.30), transparent 60%), #0d0d0f;
+    display: grid; grid-template-columns: 560px 1fr; gap: 48px; padding: 72px 72px;
+  }
+  .mark {
+    width: 64px; height: 64px; border-radius: 16px; display: grid; place-items: center;
+    background: linear-gradient(135deg, #2a78d6, #7b5cff); font-weight: 800; font-size: 28px; letter-spacing: -1px;
+    color: #fff;
+  }
+  .name { display: flex; align-items: center; gap: 18px; font-size: 30px; font-weight: 700; }
+  h1 { font-size: 64px; line-height: 1.04; letter-spacing: -2px; margin: 44px 0 22px; font-weight: 800; }
+  h1 span { background: linear-gradient(90deg, #5aa2ff, #a68bff); -webkit-background-clip: text; color: transparent; }
+  p { font-size: 24px; line-height: 1.45; color: #b9b7b0; }
+  .pills { display: flex; gap: 10px; margin-top: 34px; flex-wrap: wrap; }
+  .pill { font-size: 18px; font-weight: 600; padding: 8px 16px; border-radius: 999px; background: rgba(255,255,255,0.07);
+          border: 1px solid rgba(255,255,255,0.12); color: #dcdad4; }
+  .panel {
+    align-self: center; background: #1a1a19; border: 1px solid rgba(255,255,255,0.10); border-radius: 22px;
+    padding: 26px; box-shadow: 0 30px 80px rgba(0,0,0,0.5); transform: rotate(-1.5deg);
+  }
+  .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .tile { background: #141413; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 14px 16px; }
+  .tile small { display: block; font-size: 14px; color: #898781; }
+  .tile b { font-size: 30px; letter-spacing: -1px; }
+  .tile.win b { color: #22c08a; }
+  .chart { margin-top: 16px; background: #141413; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 16px; }
+  .chart small { font-size: 14px; color: #898781; }
+  .feed { margin-top: 12px; display: grid; gap: 8px; }
+  .feed div { font-size: 15px; background: rgba(57,135,229,0.14); border-radius: 8px; padding: 8px 12px; color: #c3c2b7; }
+  .feed b { color: #5aa2ff; }
+</style>
+</head>
+<body>
+  <div>
+    <div class="name"><div class="mark">FR</div>FortReplays</div>
+    <h1>Your Fortnite stats, <span>from your replays.</span></h1>
+    <p>Damage, accuracy, placements, kill feeds and trends. Runs in your browser. Nothing is uploaded.</p>
+    <div class="pills"><span class="pill">Free</span><span class="pill">Private</span><span class="pill">No install</span><span class="pill">Open source</span></div>
+  </div>
+  <div class="panel">
+    <div class="tiles">
+      <div class="tile win"><small>Wins</small><b>12</b></div>
+      <div class="tile"><small>Avg damage</small><b>842</b></div>
+      <div class="tile"><small>Accuracy</small><b>31%</b></div>
+    </div>
+    <div class="chart">
+      <small>Placement</small>
+      <svg viewBox="0 0 560 140" width="100%" height="140">
+        <g stroke="#2c2c2a"><line x1="0" x2="560" y1="20" y2="20"/><line x1="0" x2="560" y1="70" y2="70"/><line x1="0" x2="560" y1="120" y2="120"/></g>
+        <polyline fill="none" stroke="#3987e5" stroke-width="3" stroke-linejoin="round"
+          points="0,110 40,90 80,100 120,60 160,75 200,40 240,85 280,50 320,30 360,65 400,20 440,45 480,25 520,20 560,35"/>
+        <g fill="#22c08a"><circle cx="400" cy="20" r="7"/><circle cx="520" cy="20" r="7"/></g>
+      </svg>
+    </div>
+    <div class="feed">
+      <div>4:12 &nbsp; <b>You</b> knocked an opponent &nbsp;·&nbsp; Shotgun · 6 m</div>
+      <div>4:15 &nbsp; <b>You</b> eliminated an opponent &nbsp;·&nbsp; SMG · 11 m</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FortReplays</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+  <script>
+    // Applied before first paint so the page never flashes the wrong theme.
+    (function () {
+      var saved = localStorage.getItem("fr.theme");
+      if (saved === "light" || saved === "dark") {
+        document.documentElement.setAttribute("data-theme", saved);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <div class="app">
+    <nav class="sidebar">
+      <div class="brand"><strong>FortReplays</strong><span>local</span></div>
+      <button class="nav-item" data-route="matches">Matches <span class="count" id="nav-match-count"></span></button>
+      <button class="nav-item" data-route="import">Upload</button>
+      <button class="nav-item" data-route="settings">Settings</button>
+      <div class="sidebar-foot">
+        <div class="segmented" role="group" aria-label="Theme">
+          <button data-theme-set="light">Light</button>
+          <button data-theme-set="dark">Dark</button>
+          <button data-theme-set="system">Auto</button>
+        </div>
+      </div>
+    </nav>
+    <main class="main" id="view"></main>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
